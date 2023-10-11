@@ -1,0 +1,36 @@
+        -:    0:Source:copyingfile.c
+        -:    0:Graph:copyingfile.gcno
+        -:    0:Data:copyingfile.gcda
+        -:    0:Runs:2
+        -:    0:Programs:1
+        -:    1:#include<stdio.h>
+        -:    2:
+        2:    3:void main()
+        -:    4:{
+        -:    5:   //Find maximum number
+        -:    6:   //scan 4 numbers
+        -:    7:   int a,b,c,d;
+        -:    8:
+        2:    9:   printf("Enter the value : ");
+        2:   10:   scanf("%d %d %d %d",&a,&b,&c,&d);
+        -:   11:
+        2:   12:   if(a>b && a>c && a>d)
+        -:   13:   {
+        1:   14:      printf("a is maximum\n");
+        -:   15:   }
+        -:   16:
+        1:   17:   else if(b>c && b>d)
+        -:   18:   {
+    #####:   19:      printf("b is maximum\n");
+        -:   20:   }
+        -:   21:
+        1:   22:   else if(c>d)
+        -:   23:   {
+    #####:   24:      printf("c is maximum\n");
+        -:   25:   }
+        -:   26:
+        -:   27:   else
+        -:   28:   {
+        1:   29:      printf("d is maximum\n");
+        -:   30:   }
+        2:   31:}

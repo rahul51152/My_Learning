@@ -1,0 +1,59 @@
+ the process of creatig a c program involve many different steps
+	-preprocessor
+	-compilation
+	-assembler
+	-linker
+	-loader
+
+1) preprocessor :----
+
+	-remove all the comments
+	-include all of the files from various libreries that the program needs to compile
+	-expansion of macros definations
+	
+
+	"#" :-- symbol
+	#define
+	#include
+	#ifdef
+	#ifndef
+	#elif
+	#if
+	#endif
+	#else
+
+	## within a macro defination combines two arguments 
+
+	
+	#ifdef : ---->  dierective whether an identifier is currently difined.
+			identifier can be defined #difine dierective or on the command line.
+
+	example : ---->
+				#define UNIX 1
+				gcc -D UNIX program.c
+
+
+	#ifdef and #endif : ----> the general form of the #ifdef directive is
+					#ifdef identifier
+
+			 	  the #endif directive ends the scope of the #if ,#ifdef,#ifndef,#else or #elif directive,
+
+
+	#ifndef : ----> negative of the #ifdef
+	
+	#if :---> it is doing oparation in the define macros
+	
+	#else :---> to complement the #ifdef ,#ifndef and #if
+
+
+
+#pragma:----->you place compiler intruction in your source code
+		you request special behaviour from the compiler
+
+
+		to control the amount of the memory set aside for automatic variable
+		to set the strictness of error checking 
+		to enable nonstandard language features
+
+
+

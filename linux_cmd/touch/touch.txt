@@ -1,0 +1,11 @@
+ 
+touch :  without using vim we can create the any type of thr file.
+
+we cal also use as --->
+				any type of file,
+				  |
+			mkidir/text file
+			  |	  
+			directory,
+
+example :  touch  dir1/text.c

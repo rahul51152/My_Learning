@@ -1,0 +1,7 @@
+rahul	10
+darshan	20
+mehul	30
+ramesh	40
+desh	50
+sunny	299
+bhumika	60
