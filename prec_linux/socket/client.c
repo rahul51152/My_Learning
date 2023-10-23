@@ -22,4 +22,7 @@ int main(){
 	 printf("client established connection with server\n");
 
  	 close(sockfd);
+	 return 0;
+
+
 }
