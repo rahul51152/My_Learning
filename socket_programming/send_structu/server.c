@@ -53,7 +53,7 @@ int main(){
         }
 	printf("connected\n");
 	int n;
-	read(new_socket,(int *)&n,sizeof(int));
+	read(new_socket,&n,4);
 	while(n--){
         	valread = read(new_socket,&s,8);
         	printf("buffer : %d %d \n",s.num1,s.num2);
