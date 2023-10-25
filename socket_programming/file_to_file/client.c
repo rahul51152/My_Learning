@@ -18,12 +18,14 @@ int main(){
 	
 	FILE *file;
 	char buffer[20];
+	int result;
 	file = fopen("input.txt","r");
 	while(fgets(buffer,sizeof(buffer),file)!=NULL){
 		send(client_fd,(char *)&buffer,strlen(buffer),0);
-		sleep(1);
-
-	}
+		read(client_fd,(int *)&result,sizeof(int));
+		printf("--------------------\n");
+		printf("\t%s \t= %d\n",buffer,result);
+		}
 	fclose(file);
 	close(client_fd);
 	return 0;

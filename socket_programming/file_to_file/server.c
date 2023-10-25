@@ -10,12 +10,16 @@
 int algorithm(char* buf){
 	int i=0;
 	char buf1[10];
-	char buf2[10];
-	while(buf[i]!='\r'){
+	while(buf[i]!='+'){
+		buf1[i] = buf[i];
+		i++;
 	}
-	printf("%d\n",i);
-
-	return 0;
+	int c = atoi(buf1)+atoi(buf+i);
+	FILE *f;
+	f = fopen("output.txt","a");
+	fprintf(f,"%d+%d = %d\n",atoi(buf1),atoi(buf+i),c);
+	fclose(f);
+	return c;
 }
 
 
@@ -39,7 +43,9 @@ int main(){
 	printf("connected\n");
 	char buf[1000];
 	while(read(new_sock,(char *)buf,strlen(buf))>0){
-		algorithm(buf);
+		printf("%s",buf);
+		int c = algorithm(buf);
+		send(new_sock,(int *)&c,sizeof(int),0);
 	}
 	close(new_sock);
 	close(serv_fd);
