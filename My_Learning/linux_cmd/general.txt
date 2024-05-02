@@ -1,0 +1,175 @@
+rm : command to delete the file .
+
+rm -R directory name : it can delete  the all the file in the directoty and anlso remove the directory also.
+
+
+rm -i directory name : it can asking for the comformation also to removing file.
+
+rm -Rv derectory name : is given the summery of the deleting files.
+
+
+cp  file1 file2 : for copy file from one to anthor file.
+
+file1 - > source file ,
+file2 - > destination file.
+
+
+cp : it also use for the directory, 
+
+cp -R dir1 dir2  : copy the all file of dir1 into dir2.
+
+rm -v dir1 dir 2 : give the summery of the copying files.
+
+rm -i file1 file2 dir2 : asking for the copy of file is push in to directory 2.
+
+
+
+mv oldname newname : it give new name for the file.
+
+mv oldname .newname : it also put hidden the directory.
+.newname - >  it is hidden file file of directory.
+mv .oldfile newname - > it olso make hidden file to visible file.
+
+mv filename directory_name : file is moved in to the directory using this command.
+
+
+
+if we are use command :-> mv -i file1 dir1(directory)
+		dir1->file1  : dir1 have also have also file1.
+it is asking for the overwriting of the the file1 detailes.
+
+we can also do as : mv ram.png ram
+mv -> move command
+ram.png -> photographs
+ram -> changed name of the photograph's name.
+
+
+file  file_name : given the discription of the file. 
+
+how to make space in the directory name ?
+we can use command foer this : mkdir 'dire 1'/"dire 1"
+if we are use withot "", command is : mkdir/ file_name
+				    : mkdir/ / file_name
+
+we can remove direcrtory, command is : rmdir 'dir 1'/"dir 1"
+				     : rmdir/ file_name
+				     : rmdir/ / file_name (for double space)
+
+
+
+we are put command in the command prompt is  :  mkdir $dir1 it is not working beacouse  "$" is the special charector ,
+
+if,we have use the the "$" so command is : mkdir \$dir1
+
+rm -- : it is the detaile given which file you can deleteing.
+
+ult+u :  it is the command for the uparcase in the terminal. 
+control+k :  command for cut the string in the terminal
+control+u :  command for the cut the string in the terminal
+control+y :  command for the pasting the string in the terminal
+comtrol+l : to clear the terminal
+
+
+------> it is commands which is used in the nano text editor.,
+^G     (F1)      Display this help text
+^X     (F2)      Close the current buffer / Exit from nano
+^O     (F3)      Write the current buffer (or the marked region)                   to disk
+^R     (Ins)     Insert another file into current buffer (or
+                   into new buffer)
+
+^W     (F6)      Search forward for a string or a regular
+                   expression
+^\     (M-R)     Replace a string or a regular expression
+^K     (F9)      Cut current line (or marked region) and store
+                   it in cutbuffer
+^U     (F10)     Paste the contents of cutbuffer at current
+                   cursor position
+
+^T               Execute a function or an external command
+^J     (F4)      Justify the current paragraph
+
+^C     (F11)     Display the position of the cursor
+
+
+
+------> using vim .bash_history command we can edit our history which is showing to putting the command history in the terminal.
+
+history -c : it is clear history in the history command 
+
+less file_name : it gives seprate screen,less command is view of the programm file.
+cat file_name : it is commnad for the text summery in the command promp.
+tac file_name : reverse order printing the content.
+
+head file_name : give text of this file in the terminal.
+head -n 20 file_name : give the 20 line of this file in the terminal
+
+tail file_name : give the botom of the files.
+
+wc file_name : gives the lines,words,bits of this file.
+exam : wc hello.c  ->  output : 1 6  28
+				| |  |
+				l w  bits,
+
+if we are putting the command in terminal : wc -l file_name 
+it gives number of the file.
+
+same way : wc -w file_name(for words)
+	 : wc -c file_name(bits)
+	 : wc -L file_name(longest line charector)
+
+
+
+four type of commands:
+			1) executabale command
+			2) shell builtins command
+			3) shell scripts 
+			4) alias
+....>>>>> how to know about which type of command is thare ,
+...........................> it is command for that : type command_name.
+
+file path_of_command : it is give information about the executable command.
+
+if we have to know about the path of the commnad : which commnad_name
+if not shhow anything it is called shell buliting command.
+
+whatis command : give sort iformation about the command.
+
+
+
+we are use multiple command using ";"  and "&&",-->
+examp : cd;cal;mkdir dir    (or)	cd && mkdir dir && cal
+
+
+
+wildcard  : is a symbol that represents one or more charecters,
+"*" :  it doing select all of the file ,
+example : cp * dir1 :--> it doing all the file copying into the directory.
+we can also use : rm * : delete  all the file.
+we can use : cp file* dir1 : copy file which name is starting fromfile is coping in to directory.
+we can use as : cp *.txt dir1.
+
+
+this way one more symbole act like command : "?"
+it is  represent a single charector,
+command :  cp file?.txt dir1 :-> meas file1.txt, file2.txt.....represent only single charecter.
+we can also use as : cp file??.txt dir1 :-> two charecter.
+
+if we have large number of files, and we want to copy file which is starting from a,b and c, so we have command for that.
+command : cp [abc]* dir1
+		|     
+	     file starting from a, b, c.
+
+command for upper case and lower case :->
+					cp [[:upper:]]* dir1
+					cp [[:lower:]]* dir1
+					cp [[:alpha:]]* dir1
+					cp [[:alnum:]]* dir1
+					cp [[:digit:]]* dir1
+
+
+we can make our own command in the linux:
+			-> using : alias command_name="discription"
+						|         |
+			 exmaple : alias     makedir : "mkdir dir1"
+
+this make command store in the vim ~/.bashrc

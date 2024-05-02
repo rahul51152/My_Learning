@@ -1,0 +1,11 @@
+ command for signal : 
+
+		gcc signal.c -o signal
+		
+		stop the execusion of the program....used in program SIGSTOP
+		
+
+		->> PS
+		->> kill -s SIGCONT pid
+
+

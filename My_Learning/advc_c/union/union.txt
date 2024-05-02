@@ -1,0 +1,23 @@
+srtuct owner {
+char socsecurity[12];
+}
+
+
+struct leasecompany{
+	char name[40];
+	char headquarter[40];
+};
+
+struct car_data{
+	char make[15];
+	int status;
+	union{
+		struct owner owncar;
+		struct leasecompany leasecar;
+	};
+};
+
+
+
+
+

@@ -1,0 +1,1 @@
+1. How to use tail with pipes(|): The cut command can be piped with many other commands of the unix. In the following example output of the cat command is given as input to the cut command with -f option to sort the state names coming from file state.txt in the reverse order.
